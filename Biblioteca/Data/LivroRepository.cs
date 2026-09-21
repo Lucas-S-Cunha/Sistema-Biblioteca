@@ -1,5 +1,4 @@
 using Biblioteca.Models;
-using sisBib.Models;
 
 namespace sisBib.Data
 {
@@ -10,7 +9,7 @@ namespace sisBib.Data
         public void Adicionar(Livro livro) // Método: Adiciona livros na biblioteca
         {
             livro.Id = proximoId++;
-            _tabelaLivros.Add(livro);[]
+            _tabelaLivros.Add(livro);
         }
         public List<Livro> ObterTodos()
         {
