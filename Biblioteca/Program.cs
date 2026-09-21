@@ -1,1 +1,1 @@
-﻿Console.WriteLine("que sistema ruim!");
+﻿Console.WriteLine("");
