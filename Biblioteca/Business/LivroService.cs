@@ -14,18 +14,26 @@ namespace SisBib.Business
             // Regra de Negócio 1: Campos obrigatórios
             if (string.IsNullOrWhiteSpace(titulo) || string.IsNullOrWhiteSpace(autor))
             {
+                mensagemErro = "ERRO: Título e Autor são obrigatórios!";
+                return false;
                 //vamos contruir esse bloco de código para validar os campos obrigatórios
+
             }
 
             // Regra de Negócio 2: Título precisa ter pelo menos 3 caracteres
             if (titulo.Length < 3)
             {
+                mensagemErro = "ERRO: Título deve ter no mínimo 3 caracteres!";
+                return false;
                 //vamos contruir esse bloco de código para validar o comprimento do título
             }
 
             //CRIANDO UM NOVO OBJETO LIVRO E ADICIONANDO AO REPOSITÓRIO
             Livro novoLivro = new Livro
             {
+                Titulo = titulo,
+                Autor = autor,
+                Emprestado = false;
                 //vamos contruir esse bloco de código para criar um novo livro e adicionar ao repositório
             };
           
